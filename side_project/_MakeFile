@@ -1,0 +1,114 @@
+
+CC = avr-gcc
+OBJCOPY = avr-objcopy.exe
+# AVRDUDE := avrdude
+MAIN_FILES = sensor_transmitter actuator_reciver
+DRIVERS_PATH = ..
+VL_PATH = $(DRIVERS_PATH)/VL
+MCAL_PATH = $(DRIVERS_PATH)/MCAL
+HAL_PATH = $(DRIVERS_PATH)/HAL
+RTOS_PATH = $(DRIVERS_PATH)/FreeRTOS
+CFLAGS =  -ffunction-sections -Wl,--gc-sections -g -Os -o
+LFLAGS =  -ffunction-sections -Wl,--gc-sections -Os -mmcu=atmega32 -o
+HFLAGS = -j .text -j .data -O ihex
+MFLAGS = -Wl,-Map,
+
+DEFINES += -D __AVR_ATmega32__
+DEFINES += -D F_CPU=8000000
+
+# SRC += $(RTOS_PATH)/croutine.c
+# SRC += $(RTOS_PATH)/heap_1.c
+# SRC += $(RTOS_PATH)/list.c
+# SRC += $(RTOS_PATH)/port.c
+# SRC += $(RTOS_PATH)/queue.c
+# SRC += $(RTOS_PATH)/tasks.c
+# SRC += $(RTOS_PATH)/timers.c
+
+# INCLUDE += $(RTOS_PATH)/FreeRTOS.h
+# INCLUDE += $(RTOS_PATH)/FreeRTOSConfig.h
+# INCLUDE += $(RTOS_PATH)/croutine.h
+# INCLUDE += $(RTOS_PATH)/list.h
+# INCLUDE += $(RTOS_PATH)/macros.h
+# INCLUDE += $(RTOS_PATH)/mpu_wrappers.h
+# INCLUDE += $(RTOS_PATH)/portable.h
+# INCLUDE += $(RTOS_PATH)/portmacro.h
+# INCLUDE += $(RTOS_PATH)/projdefs.h
+# INCLUDE += $(RTOS_PATH)/queue.h
+# INCLUDE += $(RTOS_PATH)/semphr.h
+# INCLUDE += $(RTOS_PATH)/StackMacros.h
+# INCLUDE += $(RTOS_PATH)/task.h
+# INCLUDE += $(RTOS_PATH)/timers.h
+
+# SRC = $(MAIN_APP).c
+INCLUDE += TransmitData.h
+INCLUDE_PATH += -I.
+INCLUDE_PATH += -I$(DRIVERS_PATH)
+INCLUDE_PATH += -I$(RTOS_PATH)
+
+INCLUDE += $(VL_PATH)/MCU.h
+INCLUDE += $(VL_PATH)/Types.h
+INCLUDE += $(VL_PATH)/BitArithmetics.h
+
+SRC += $(MCAL_PATH)/DIO/DIO.c
+INCLUDE += $(MCAL_PATH)/DIO/DIO.h
+INCLUDE += $(MCAL_PATH)/DIO/DIO_prv.h
+
+SRC += $(MCAL_PATH)/ADC/ADC.c
+INCLUDE += $(MCAL_PATH)/ADC/ADC.h
+INCLUDE += $(MCAL_PATH)/ADC/ADC_prv.h
+
+SRC += $(MCAL_PATH)/ExternalInterrupt/ExternalInterrupt.c
+INCLUDE += $(MCAL_PATH)/ExternalInterrupt/ExternalInterrupt.h
+INCLUDE += $(MCAL_PATH)/ExternalInterrupt/ExternalInterrupt_prv.h
+
+SRC += $(MCAL_PATH)/UART/UART.c
+INCLUDE += $(MCAL_PATH)/UART/UART.h
+INCLUDE += $(MCAL_PATH)/UART/UART_prv.h
+
+# SRC += $(HAL_PATH)/SevenSegment/SevenSegment.c
+# INCLUDE += $(HAL_PATH)/SevenSegment/SevenSegment.h
+
+# SRC += $(HAL_PATH)/LCD/LCD.c
+# INCLUDE += $(HAL_PATH)/LCD/LCD.h
+# INCLUDE += $(HAL_PATH)/LCD/LCD_prv.h
+
+SRC += $(HAL_PATH)/Keypad/Keypad.c
+INCLUDE += $(HAL_PATH)/Keypad/Keypad.h
+INCLUDE += $(HAL_PATH)/Keypad/Keypad_prv.h
+
+# SRC += $(HAL_PATH)/DCMotor/DCMotor.c
+# INCLUDE += $(HAL_PATH)/DCMotor/DCMotor.h
+
+# SRC += $(HAL_PATH)/Stepper/Stepper.c
+# INCLUDE += $(HAL_PATH)/Stepper/Stepper.h
+
+# SRC += $(DRIVERS_PATH)/AIO.c
+# INCLUDE += $(DRIVERS_PATH)/AIO.h
+
+
+SRC += $(wildcard $(RTOS_PATH)/*.c)
+# INCLUDE += $(wildcard $(RTOS_PATH)/*.h)
+
+# DUDEFLAGS = -c
+# DUDEFLAGS += usbasp
+# DUDEFLAGS += -p
+# DUDEFLAGS += m32
+# DUDEFLAGS += -u
+# DUDEFLAGS += -U
+# DUDEFLAGS += flash:w:$(MAIN_HEX_PATH)
+
+.PHONY: all
+
+# $(patsubst %, %.map, $(MAIN_FILES)) : %.map : %.c $(SRC) $(INCLUDE)
+# 	$(CC) $(INCLUDE_PATH) $(INCLUDE) $(SRC) $< $(DEFINES) $(MFLAGS) $@
+
+all : $(patsubst %, %.hex, $(MAIN_FILES))
+
+$(patsubst %, %.hex, $(MAIN_FILES)) : %.hex : %.elf
+	$(OBJCOPY) $(HFLAGS) $< $@
+
+$(patsubst %, %.elf, $(MAIN_FILES)) : %.elf : %.o
+	$(CC) $*.c $(SRC) $(INCLUDE_PATH) $(INCLUDE) $(LFLAGS) $@
+
+$(patsubst %, %.o, $(MAIN_FILES)) : %.o : %.c $(SRC) $(INCLUDE)
+	$(CC) $(CFLAGS) $@ $(INCLUDE_PATH) $(INCLUDE) $(SRC) $< $(DEFINES) $(MFLAGS)$*.map

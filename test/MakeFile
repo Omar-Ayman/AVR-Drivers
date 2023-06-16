@@ -1,0 +1,86 @@
+
+CC = avr-gcc
+OBJCOPY = avr-objcopy.exe
+SIZE = avr-size
+AVRDUDE := avrdude
+MAIN_APP = test_pwm
+MCU = atmega32
+DRIVERS_PATH = .\..
+VL_PATH = $(DRIVERS_PATH)\VL
+MCAL_PATH = $(DRIVERS_PATH)\MCAL
+HAL_PATH = $(DRIVERS_PATH)\HAL
+MAIN_HEX_PATH = $(MAIN_APP).hex
+CFLAGS = -ffunction-sections -Wl,--gc-sections -g -Os -o
+LFLAGS = -ffunction-sections -Wl,--gc-sections -Os -mmcu=$(MCU) -o
+HFLAGS = -j .text -j .data -O ihex
+MFLAGS = -Wl,-Map,
+
+SRC = $(MAIN_APP).c
+INCLUDE_PATH += -I.
+INCLUDE_PATH += -I$(DRIVERS_PATH)
+
+INCLUDE += $(VL_PATH)\MCU.h
+INCLUDE += $(VL_PATH)\Types.h
+INCLUDE += $(VL_PATH)\BitArithmetics.h
+INCLUDE += $(VL_PATH)\math.h
+SRC += $(VL_PATH)\math.c
+
+SRC += $(MCAL_PATH)\DIO\DIO.c
+INCLUDE += $(MCAL_PATH)\DIO\DIO.h
+INCLUDE += $(MCAL_PATH)\DIO\DIO_prv.h
+
+SRC += $(MCAL_PATH)\ADC\ADC.c
+INCLUDE += $(MCAL_PATH)\ADC\ADC.h
+INCLUDE += $(MCAL_PATH)\ADC\ADC_prv.h
+
+SRC += $(MCAL_PATH)\PWM\PWM.c
+INCLUDE += $(MCAL_PATH)\PWM\PWM.h
+INCLUDE += $(MCAL_PATH)\PWM\PWM_prv.h
+
+# SRC += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.c
+# INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.h
+# INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt_prv.h
+
+# SRC += $(MCAL_PATH)\UART\UART.c
+# INCLUDE += $(MCAL_PATH)\UART\UART.h
+# INCLUDE += $(MCAL_PATH)\UART\UART_prv.h
+
+# SRC += $(HAL_PATH)\SevenSegment\SevenSegment.c
+# INCLUDE += $(HAL_PATH)\SevenSegment\SevenSegment.h
+
+SRC += $(HAL_PATH)\LCD\LCD.c
+INCLUDE += $(HAL_PATH)\LCD\LCD.h
+INCLUDE += $(HAL_PATH)\LCD\LCD_prv.h
+
+# SRC += $(HAL_PATH)\Keypad\Keypad.c
+# INCLUDE += $(HAL_PATH)\Keypad\Keypad.h
+# INCLUDE += $(HAL_PATH)\Keypad\Keypad_prv.h
+
+# SRC += $(HAL_PATH)\DCMotor\DCMotor.c
+# INCLUDE += $(HAL_PATH)\DCMotor\DCMotor.h
+
+# SRC += $(HAL_PATH)\Stepper\Stepper.c
+# INCLUDE += $(HAL_PATH)\Stepper\Stepper.h
+
+DUDEFLAGS = -c
+DUDEFLAGS += usbasp
+DUDEFLAGS += -p
+DUDEFLAGS += m32
+DUDEFLAGS += -u
+DUDEFLAGS += -U
+DUDEFLAGS += flash:w:$(MAIN_HEX_PATH)
+
+.PHONY: Build
+
+# Burn : Build
+# 	$(AVRDUDE) $(DUDEFLAGS)
+
+Build : $(MAIN_APP).elf
+	$(OBJCOPY) $(HFLAGS) $< $(MAIN_HEX_PATH)
+	$(SIZE) --format=avr --mcu=$(MCU) $<
+	
+$(MAIN_APP).elf: $(MAIN_APP).o
+	$(CC) $(SRC) $(INCLUDE_PATH) $(LFLAGS) $@
+	
+$(MAIN_APP).o: $(SRC) $(INCLUDE)
+	$(CC) $(SRC) $(INCLUDE_PATH) $(CFLAGS) $@

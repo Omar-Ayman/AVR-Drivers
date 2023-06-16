@@ -1,0 +1,877 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulhi3.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o (__mulhi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulsi3.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o (__mulsi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_divmodhi4.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o (__divmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodsi4.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o (__udivmodsi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_copy_data.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_clear_bss.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o (__lshrdi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodhi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memcpy.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o (memcpy)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memset.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o (memset)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(strncpy.o)
+                              C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o (strncpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+tempKey             0x1               C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .text.int_log_2
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .text.DIO_togglePin
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .text.DIO_assignPortSectionDirection
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .text.ADC_initGeneral
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .text.ADC_readMilliVolts
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.__vector_13
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_dequeueBufferAtomic
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_consumeBufferAwait
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_consumeBuffer
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_init
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_initDefault
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_writeByte
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_writeString
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_readByteAwait
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_readByte
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_readBytesAwait
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_readBytes
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text.UART_readString
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .text.Keypad_getAllPressedKeys
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .text.xCoRoutineRemoveFromEventList
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .text.vCoRoutineSchedule
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .text.vCoRoutineAddToDelayedList
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .text.xCoRoutineCreate
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .text.vPortInitialiseBlocks
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .text.xPortGetFreeHeapSize
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .text.vPortEndScheduler
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.uxQueueMessagesWaiting
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueIsQueueFullFromISR
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.vQueueDelete
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueReceiveFromISR
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.prvCopyDataToQueue
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueGenericSendFromISR
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.prvUnlockQueue
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueGenericReceive
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueGenericSend
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text.xQueueCreate
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.xTaskGetTickCountFromISR
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.uxTaskGetNumberOfTasks
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.vTaskSetTimeOutState
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.xTaskCheckForTimeOut
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.vTaskMissedYield
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.xTaskRemoveFromEventList
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.vTaskPlaceOnEventList
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.vTaskDelay
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.vTaskDelete
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.vTaskEndScheduler
+                0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+ .data          0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+ .bss           0x00000000        0x0 C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulhi3.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulhi3.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulhi3.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulsi3.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulsi3.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulsi3.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulsi3.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_divmodhi4.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodsi4.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodsi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodsi4.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodhi4.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memcpy.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memcpy.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memcpy.o)
+ .text.avr-libc
+                0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memcpy.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memset.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memset.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memset.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(strncpy.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(strncpy.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(strncpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+LOAD C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x159e
+ *(.vectors)
+ .vectors       0x00000000       0x1a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000001a                . = ALIGN (0x2)
+                0x0000001a                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000001a        0x0 linker stubs
+ *(.trampolines*)
+                0x0000001a                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000001a                __ctors_start = .
+ *(.ctors)
+                0x0000001a                __ctors_end = .
+                0x0000001a                __dtors_start = .
+ *(.dtors)
+                0x0000001a                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000001a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+                0x0000001a                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000001a        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000026       0x18 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_copy_data.o)
+                0x00000026                __do_copy_data
+ .init4         0x0000003e       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_clear_bss.o)
+                0x0000003e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000004e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+ *(.init9)
+ *(.text)
+ .text          0x00000052        0x2 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/crts8515.o
+                0x00000052                __vector_12
+                0x00000052                __bad_interrupt
+                0x00000052                __vector_6
+                0x00000052                __vector_11
+                0x00000052                __vector_5
+                0x00000052                __vector_4
+                0x00000052                __vector_9
+                0x00000052                __vector_8
+                0x00000052                __vector_10
+                0x00000054                . = ALIGN (0x2)
+ *(.text.*)
+ .text.main     0x00000054       0x8c C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x00000054                main
+ .text.Task_UART
+                0x000000e0       0x36 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x000000e0                Task_UART
+ .text.Task_KEY
+                0x00000116       0x50 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x00000116                Task_KEY
+ .text.Task_ADC
+                0x00000166       0x40 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x00000166                Task_ADC
+ .text.Interrupt1
+                0x000001a6       0x22 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x000001a6                Interrupt1
+ .text.Interrupt0
+                0x000001c8       0x20 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x000001c8                Interrupt0
+ .text.DIO_readPin
+                0x000001e8       0x2e C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x000001e8                DIO_readPin
+ .text.DIO_writePin
+                0x00000216       0x5c C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x00000216                DIO_writePin
+ .text.DIO_setPinDirectionInitVal
+                0x00000272       0x78 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x00000272                DIO_setPinDirectionInitVal
+ .text.DIO_setPinDirection
+                0x000002ea        0xc C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x000002ea                DIO_setPinDirection
+ .text.DIO_readPortSection
+                0x000002f6       0x52 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x000002f6                DIO_readPortSection
+ .text.DIO_writeAllPinsPortSection
+                0x00000348       0x9c C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x00000348                DIO_writeAllPinsPortSection
+ .text.DIO_setPortSectionDirection
+                0x000003e4       0xda C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x000003e4                DIO_setPortSectionDirection
+ .text.DIO_assignPortSection
+                0x000004be       0x7a C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                0x000004be                DIO_assignPortSection
+ .text.ADC_readValue
+                0x00000538       0x2a C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+                0x00000538                ADC_readValue
+ .text.ADC_init
+                0x00000562       0x30 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+                0x00000562                ADC_init
+ .text.__vector_1
+                0x00000592       0x52 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+                0x00000592                __vector_1
+ .text.__vector_2
+                0x000005e4       0x52 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+                0x000005e4                __vector_2
+ .text.__vector_3
+                0x00000636       0x52 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+                0x00000636                __vector_3
+ .text.ExternalInterrupt_setupPin
+                0x00000688      0x122 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+                0x00000688                ExternalInterrupt_setupPin
+ .text.UART_setBaudRate
+                0x000007aa       0x3e C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+                0x000007aa                UART_setBaudRate
+ .text.UART_initCustom
+                0x000007e8       0x86 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+                0x000007e8                UART_initCustom
+ .text.UART_writeBytes
+                0x0000086e       0x30 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+                0x0000086e                UART_writeBytes
+ .text.firstSetBit
+                0x0000089e       0x14 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+                0x0000089e                firstSetBit
+ .text.Keypad_getFirstPressedKey
+                0x000008b2      0x11a C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+                0x000008b2                Keypad_getFirstPressedKey
+ .text.Keypad_init
+                0x000009cc       0x2a C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+                0x000009cc                Keypad_init
+ .text.vPortFree
+                0x000009f6        0x2 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+                0x000009f6                vPortFree
+ .text.pvPortMalloc
+                0x000009f8       0x52 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+                0x000009f8                pvPortMalloc
+ .text.vListInitialise
+                0x00000a4a       0x24 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+                0x00000a4a                vListInitialise
+ .text.vListInitialiseItem
+                0x00000a6e        0xa C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+                0x00000a6e                vListInitialiseItem
+ .text.vListInsertEnd
+                0x00000a78       0x5e C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+                0x00000a78                vListInsertEnd
+ .text.vListInsert
+                0x00000ad6       0x74 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+                0x00000ad6                vListInsert
+ .text.vListRemove
+                0x00000b4a       0x52 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+                0x00000b4a                vListRemove
+ .text.pxPortInitialiseStack
+                0x00000b9c       0x94 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+                0x00000b9c                pxPortInitialiseStack
+ .text.xPortStartScheduler
+                0x00000c30       0x6a C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+                0x00000c30                xPortStartScheduler
+ .text.vPortYieldFromTick
+                0x00000c9a       0xb2 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+                0x00000c9a                vPortYieldFromTick
+ .text.__vector_7
+                0x00000d4c        0x4 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+                0x00000d4c                __vector_7
+ .text.vPortYield
+                0x00000d50       0xb0 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+                0x00000d50                vPortYield
+ .text.vTaskSuspendAll
+                0x00000e00        0xc C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00000e00                vTaskSuspendAll
+ .text.xTaskGetTickCount
+                0x00000e0c       0x18 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00000e0c                xTaskGetTickCount
+ .text.vTaskSwitchContext
+                0x00000e24       0x8c C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00000e24                vTaskSwitchContext
+ .text.vTaskIncrementTick
+                0x00000eb0      0x146 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00000eb0                vTaskIncrementTick
+ .text.prvAddCurrentTaskToDelayedList
+                0x00000ff6       0x6c C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.xTaskResumeAll
+                0x00001062       0xf4 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00001062                xTaskResumeAll
+ .text.vTaskDelayUntil
+                0x00001156       0x76 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00001156                vTaskDelayUntil
+ .text.prvIdleTask
+                0x000011cc       0x64 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .text.xTaskGenericCreate
+                0x00001230      0x222 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00001230                xTaskGenericCreate
+ .text.vTaskStartScheduler
+                0x00001452       0x52 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00001452                vTaskStartScheduler
+ .text.libgcc   0x000014a4       0x24 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_mulhi3.o)
+                0x000014a4                __mulhi3
+ .text.libgcc   0x000014c8       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_divmodhi4.o)
+                0x000014c8                __divmodhi4
+                0x000014c8                _div
+ .text.libgcc   0x000014ee       0x4e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodsi4.o)
+                0x000014ee                __udivmodsi4
+ .text.libgcc   0x0000153c       0x2c c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_udivmodhi4.o)
+                0x0000153c                __udivmodhi4
+ .text.avr-libc
+                0x00001568       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(memset.o)
+                0x00001568                memset
+ .text.avr-libc
+                0x00001578       0x22 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib\libc.a(strncpy.o)
+                0x00001578                strncpy
+                0x0000159a                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000159a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+                0x0000159a                exit
+                0x0000159a                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000159a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000159e                _etext = .
+
+.data           0x00800060       0x72 load address 0x0000159e
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060       0x31 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x00800083                statePin0
+                0x0080007f                keypad
+                0x00800084                statePin1
+ .data          0x00800091       0x18 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .data          0x008000a9       0x12 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .data          0x008000bb       0x10 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .data          0x008000cb        0x7 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x008000d2                . = ALIGN (0x2)
+                0x008000d2                _edata = .
+                0x008000d2                PROVIDE (__data_end, .)
+
+.bss            0x008000d2      0x2c8
+                0x008000d2                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x008000d2        0x3 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x008000d2                adcPin
+                0x008000d3                data
+ .bss           0x008000d5        0x1 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .bss           0x008000d6        0x6 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .bss           0x008000dc      0x25a C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .bss           0x00800336       0x63 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                0x00800336                pxCurrentTCB
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800399        0x1 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                0x00800399                tempKey
+                0x0080039a                PROVIDE (__bss_end, .)
+                0x0000159e                __data_load_start = LOADADDR (.data)
+                0x00001610                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080039a        0x0
+                0x0080039a                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080039a                PROVIDE (__noinit_end, .)
+                0x0080039a                _end = .
+                0x0080039a                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x458
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x48 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_aranges
+                0x00000048       0x20 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_aranges
+                0x00000068       0x68 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_aranges
+                0x000000d0       0x38 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_aranges
+                0x00000108       0x38 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_aranges
+                0x00000140       0x98 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_aranges
+                0x000001d8       0x38 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_aranges
+                0x00000210       0x38 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_aranges
+                0x00000248       0x38 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_aranges
+                0x00000280       0x40 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_aranges
+                0x000002c0       0x48 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_aranges
+                0x00000308       0x78 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_aranges
+                0x00000380       0xb8 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_aranges
+                0x00000438       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+
+.debug_pubnames
+                0x00000000      0x949
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xa8 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_pubnames
+                0x000000a8       0x20 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_pubnames
+                0x000000c8      0x111 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_pubnames
+                0x000001d9       0x5c C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_pubnames
+                0x00000235       0x5e C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_pubnames
+                0x00000293      0x162 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_pubnames
+                0x000003f5       0x6d C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_pubnames
+                0x00000462       0x96 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_pubnames
+                0x000004f8       0x64 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_pubnames
+                0x0000055c       0x71 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_pubnames
+                0x000005cd       0x8f C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_pubnames
+                0x0000065c      0x111 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_pubnames
+                0x0000076d      0x1bc C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_pubnames
+                0x00000929       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+
+.debug_info     0x00000000     0x37c0
+ *(.debug_info)
+ .debug_info    0x00000000      0x3e3 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_info    0x000003e3       0xb3 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_info    0x00000496      0x364 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_info    0x000007fa      0x27a C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_info    0x00000a74      0x2e9 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_info    0x00000d5d      0x798 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_info    0x000014f5      0x2ec C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_info    0x000017e1      0x506 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_info    0x00001ce7      0x16d C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_info    0x00001e54      0x2b5 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_info    0x00002109      0x1c6 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_info    0x000022cf      0x784 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_info    0x00002a53      0xb7f C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_info    0x000035d2       0x6f C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+ .debug_info    0x00003641      0x17f c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000     0x1276
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x146 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_abbrev  0x00000146       0x63 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_abbrev  0x000001a9      0x112 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_abbrev  0x000002bb      0x105 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_abbrev  0x000003c0      0x138 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_abbrev  0x000004f8      0x242 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_abbrev  0x0000073a      0x130 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_abbrev  0x0000086a      0x1d0 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_abbrev  0x00000a3a      0x116 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_abbrev  0x00000b50       0xdf C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_abbrev  0x00000c2f      0x11a C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_abbrev  0x00000d49      0x1b5 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_abbrev  0x00000efe      0x257 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_abbrev  0x00001155       0x33 C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+ .debug_abbrev  0x00001188       0xee c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+
+.debug_line     0x00000000     0x270a
+ *(.debug_line)
+ .debug_line    0x00000000      0x247 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_line    0x00000247       0x8b C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_line    0x000002d2      0x247 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_line    0x00000519      0x1b0 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_line    0x000006c9      0x199 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_line    0x00000862      0x431 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_line    0x00000c93      0x1ca C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_line    0x00000e5d      0x2d9 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_line    0x00001136      0x136 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_line    0x0000126c      0x1e7 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_line    0x00001453      0x2d8 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_line    0x0000172b      0x6bd C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_line    0x00001de8      0x810 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_line    0x000025f8       0x3e C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+ .debug_line    0x00002636       0xd4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+
+.debug_frame    0x00000000      0x6f0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x70 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_frame   0x00000070       0x20 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_frame   0x00000090       0xb0 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_frame   0x00000140       0x50 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_frame   0x00000190       0x50 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_frame   0x000001e0      0x110 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_frame   0x000002f0       0x50 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_frame   0x00000340       0x50 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_frame   0x00000390       0x50 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_frame   0x000003e0       0x60 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_frame   0x00000440       0x70 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_frame   0x000004b0       0xd0 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_frame   0x00000580      0x150 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_frame   0x000006d0       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+
+.debug_str      0x00000000     0x184a
+ *(.debug_str)
+ .debug_str     0x00000000      0x34a C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+                                0x389 (size before relaxing)
+ .debug_str     0x0000034a       0x19 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+                                 0xe9 (size before relaxing)
+ .debug_str     0x00000363      0x12f C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+                                0x230 (size before relaxing)
+ .debug_str     0x00000492      0x186 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+                                0x263 (size before relaxing)
+ .debug_str     0x00000618       0xf4 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+                                0x283 (size before relaxing)
+ .debug_str     0x0000070c      0x293 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+                                0x4a5 (size before relaxing)
+ .debug_str     0x0000099f       0xa9 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+                                0x1ca (size before relaxing)
+ .debug_str     0x00000a48      0x33c C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+                                0x429 (size before relaxing)
+ .debug_str     0x00000d84       0xa3 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+                                0x175 (size before relaxing)
+ .debug_str     0x00000e27       0xa8 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+                                0x205 (size before relaxing)
+ .debug_str     0x00000ecf       0xec C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+                                0x1be (size before relaxing)
+ .debug_str     0x00000fbb      0x2fb C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+                                0x490 (size before relaxing)
+ .debug_str     0x000012b6      0x4d9 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+                                0x735 (size before relaxing)
+ .debug_str     0x0000178f       0x17 C:\Users\o7a9a\AppData\Local\Temp/ccNodnyy.o
+                                 0xe9 (size before relaxing)
+ .debug_str     0x000017a6       0xa4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+                                0x129 (size before relaxing)
+
+.debug_loc      0x00000000     0x18c4
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x48 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_loc     0x00000048       0xa3 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_loc     0x000000eb      0x22c C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_loc     0x00000317       0x5a C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_loc     0x00000371       0xaf C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_loc     0x00000420      0x387 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_loc     0x000007a7      0x22a C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_loc     0x000009d1      0x170 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_loc     0x00000b41       0x50 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_loc     0x00000b91      0x100 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_loc     0x00000c91       0x3b C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_loc     0x00000ccc      0x608 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_loc     0x000012d4      0x4f8 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
+ .debug_loc     0x000017cc       0xf8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3\libgcc.a(_lshrdi3.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(sensor_transmitter.o elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x400
+ .debug_ranges  0x00000000       0x40 C:\Users\o7a9a\AppData\Local\Temp/ccaX0xtf.o
+ .debug_ranges  0x00000040       0x18 C:\Users\o7a9a\AppData\Local\Temp/ccNj5aFp.o
+ .debug_ranges  0x00000058       0x60 C:\Users\o7a9a\AppData\Local\Temp/cciepQgI.o
+ .debug_ranges  0x000000b8       0x30 C:\Users\o7a9a\AppData\Local\Temp/cctYuws5.o
+ .debug_ranges  0x000000e8       0x30 C:\Users\o7a9a\AppData\Local\Temp/ccyFSdEw.o
+ .debug_ranges  0x00000118       0xa8 C:\Users\o7a9a\AppData\Local\Temp/ccBLlVN5.o
+ .debug_ranges  0x000001c0       0x30 C:\Users\o7a9a\AppData\Local\Temp/ccieM4aI.o
+ .debug_ranges  0x000001f0       0x30 C:\Users\o7a9a\AppData\Local\Temp/ccZGmRjs.o
+ .debug_ranges  0x00000220       0x30 C:\Users\o7a9a\AppData\Local\Temp/cckmBKeh.o
+ .debug_ranges  0x00000250       0x38 C:\Users\o7a9a\AppData\Local\Temp/ccdTgW49.o
+ .debug_ranges  0x00000288       0x40 C:\Users\o7a9a\AppData\Local\Temp/ccmim166.o
+ .debug_ranges  0x000002c8       0x70 C:\Users\o7a9a\AppData\Local\Temp/ccvDtgLd.o
+ .debug_ranges  0x00000338       0xc8 C:\Users\o7a9a\AppData\Local\Temp/ccNSBIsl.o
