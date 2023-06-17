@@ -14,6 +14,8 @@ typedef ENUM_PACKED WatchdogTimer_Count {
     WatchdogTimer_2048k = 0b111,
 } WatchdogTimer_Count;
 
+void WatchdogTimer_start(WatchdogTimer_Count count);
+
 void WatchdogTimer_restart(WatchdogTimer_Count count);
 
 void WatchdogTimer_stop();
