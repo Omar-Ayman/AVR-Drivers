@@ -1,9 +1,10 @@
 
 CC = avr-gcc
 OBJCOPY = avr-objcopy.exe
+OBJDUMP = avr-objdump.exe
 SIZE = avr-size
 AVRDUDE := avrdude
-MAIN_APP = test_pwm
+MAIN_APP = test_watchdog
 MCU = atmega32
 DRIVERS_PATH = .\..
 VL_PATH = $(DRIVERS_PATH)\VL
@@ -29,17 +30,21 @@ SRC += $(MCAL_PATH)\DIO\DIO.c
 INCLUDE += $(MCAL_PATH)\DIO\DIO.h
 INCLUDE += $(MCAL_PATH)\DIO\DIO_prv.h
 
-SRC += $(MCAL_PATH)\ADC\ADC.c
-INCLUDE += $(MCAL_PATH)\ADC\ADC.h
-INCLUDE += $(MCAL_PATH)\ADC\ADC_prv.h
+# SRC += $(MCAL_PATH)\ADC\ADC.c
+# INCLUDE += $(MCAL_PATH)\ADC\ADC.h
+# INCLUDE += $(MCAL_PATH)\ADC\ADC_prv.h
 
-SRC += $(MCAL_PATH)\PWM\PWM.c
-INCLUDE += $(MCAL_PATH)\PWM\PWM.h
-INCLUDE += $(MCAL_PATH)\PWM\PWM_prv.h
+# SRC += $(MCAL_PATH)\PWM\PWM.c
+# INCLUDE += $(MCAL_PATH)\PWM\PWM.h
+# INCLUDE += $(MCAL_PATH)\PWM\PWM_prv.h
 
 # SRC += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.c
 # INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.h
 # INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt_prv.h
+
+SRC += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer.c
+INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer.h
+INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer_prv.h
 
 # SRC += $(MCAL_PATH)\UART\UART.c
 # INCLUDE += $(MCAL_PATH)\UART\UART.h
@@ -48,9 +53,9 @@ INCLUDE += $(MCAL_PATH)\PWM\PWM_prv.h
 # SRC += $(HAL_PATH)\SevenSegment\SevenSegment.c
 # INCLUDE += $(HAL_PATH)\SevenSegment\SevenSegment.h
 
-SRC += $(HAL_PATH)\LCD\LCD.c
-INCLUDE += $(HAL_PATH)\LCD\LCD.h
-INCLUDE += $(HAL_PATH)\LCD\LCD_prv.h
+# SRC += $(HAL_PATH)\LCD\LCD.c
+# INCLUDE += $(HAL_PATH)\LCD\LCD.h
+# INCLUDE += $(HAL_PATH)\LCD\LCD_prv.h
 
 # SRC += $(HAL_PATH)\Keypad\Keypad.c
 # INCLUDE += $(HAL_PATH)\Keypad\Keypad.h
@@ -84,3 +89,6 @@ $(MAIN_APP).elf: $(MAIN_APP).o
 	
 $(MAIN_APP).o: $(SRC) $(INCLUDE)
 	$(CC) $(SRC) $(INCLUDE_PATH) $(CFLAGS) $@
+
+# $(MAIN_APP).lst : $(MAIN_APP).elf
+# 	$(OBJDUMP) -d $< > $@
