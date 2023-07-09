@@ -4,21 +4,26 @@ OBJCOPY = avr-objcopy.exe
 OBJDUMP = avr-objdump.exe
 SIZE = avr-size
 AVRDUDE := avrdude
-MAIN_APP = test_watchdog
+MAIN_APP = test_freertos
 MCU = atmega32
 DRIVERS_PATH = .\..
 VL_PATH = $(DRIVERS_PATH)\VL
 MCAL_PATH = $(DRIVERS_PATH)\MCAL
 HAL_PATH = $(DRIVERS_PATH)\HAL
+RTOS_PATH = $(DRIVERS_PATH)/FreeRTOS
 MAIN_HEX_PATH = $(MAIN_APP).hex
 CFLAGS = -ffunction-sections -Wl,--gc-sections -g -Os -o
 LFLAGS = -ffunction-sections -Wl,--gc-sections -Os -mmcu=$(MCU) -o
 HFLAGS = -j .text -j .data -O ihex
 MFLAGS = -Wl,-Map,
 
+DEFINES += -D __AVR_ATmega32__
+DEFINES += -D F_CPU=8000000
+
 SRC = $(MAIN_APP).c
 INCLUDE_PATH += -I.
 INCLUDE_PATH += -I$(DRIVERS_PATH)
+INCLUDE_PATH += -I$(RTOS_PATH)
 
 INCLUDE += $(VL_PATH)\MCU.h
 INCLUDE += $(VL_PATH)\Types.h
@@ -38,17 +43,25 @@ INCLUDE += $(MCAL_PATH)\DIO\DIO_prv.h
 # INCLUDE += $(MCAL_PATH)\PWM\PWM.h
 # INCLUDE += $(MCAL_PATH)\PWM\PWM_prv.h
 
-# SRC += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.c
-# INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.h
-# INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt_prv.h
+SRC += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.c
+INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt.h
+INCLUDE += $(MCAL_PATH)\ExternalInterrupt\ExternalInterrupt_prv.h
 
-SRC += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer.c
-INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer.h
-INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer_prv.h
+# SRC += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer.c
+# INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer.h
+# INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer_prv.h
 
 # SRC += $(MCAL_PATH)\UART\UART.c
 # INCLUDE += $(MCAL_PATH)\UART\UART.h
 # INCLUDE += $(MCAL_PATH)\UART\UART_prv.h
+
+# SRC += $(MCAL_PATH)\SPI\SPI.c
+# INCLUDE += $(MCAL_PATH)\SPI\SPI.h
+# INCLUDE += $(MCAL_PATH)\SPI\SPI_prv.h
+
+# SRC += $(MCAL_PATH)\I2C\I2C.c
+# INCLUDE += $(MCAL_PATH)\I2C\I2C.h
+# INCLUDE += $(MCAL_PATH)\I2C\I2C_prv.h
 
 # SRC += $(HAL_PATH)\SevenSegment\SevenSegment.c
 # INCLUDE += $(HAL_PATH)\SevenSegment\SevenSegment.h
@@ -67,6 +80,9 @@ INCLUDE += $(MCAL_PATH)\WatchdogTimer\WatchdogTimer_prv.h
 # SRC += $(HAL_PATH)\Stepper\Stepper.c
 # INCLUDE += $(HAL_PATH)\Stepper\Stepper.h
 
+SRC += $(wildcard $(RTOS_PATH)/*.c)
+INCLUDE += $(wildcard $(RTOS_PATH)/*.h)
+
 DUDEFLAGS = -c
 DUDEFLAGS += usbasp
 DUDEFLAGS += -p
@@ -82,13 +98,13 @@ DUDEFLAGS += flash:w:$(MAIN_HEX_PATH)
 
 Build : $(MAIN_APP).elf
 	$(OBJCOPY) $(HFLAGS) $< $(MAIN_HEX_PATH)
-	$(SIZE) --format=avr --mcu=$(MCU) $<
+#	$(SIZE) --format=avr --mcu=$(MCU) $<
 	
 $(MAIN_APP).elf: $(MAIN_APP).o
 	$(CC) $(SRC) $(INCLUDE_PATH) $(LFLAGS) $@
 	
 $(MAIN_APP).o: $(SRC) $(INCLUDE)
-	$(CC) $(SRC) $(INCLUDE_PATH) $(CFLAGS) $@
+	$(CC) $(SRC) $(INCLUDE_PATH) $(DEFINES) $(MFLAGS)$(MAIN_APP).map $(CFLAGS) $@
 
 # $(MAIN_APP).lst : $(MAIN_APP).elf
 # 	$(OBJDUMP) -d $< > $@

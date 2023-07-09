@@ -1,55 +1,30 @@
 /*
-    FreeRTOS V7.0.2 - Copyright (C) 2011 Real Time Engineers Ltd.
-	
-
-    ***************************************************************************
-     *                                                                       *
-     *    FreeRTOS tutorial books are available in pdf and paperback.        *
-     *    Complete, revised, and edited pdf reference manuals are also       *
-     *    available.                                                         *
-     *                                                                       *
-     *    Purchasing FreeRTOS documentation will not only help you, by       *
-     *    ensuring you get running as quickly as possible and with an        *
-     *    in-depth knowledge of how to use FreeRTOS, it will also help       *
-     *    the FreeRTOS project to continue with its mission of providing     *
-     *    professional grade, cross platform, de facto standard solutions    *
-     *    for microcontrollers - completely free of charge!                  *
-     *                                                                       *
-     *    >>> See http://www.FreeRTOS.org/Documentation for details. <<<     *
-     *                                                                       *
-     *    Thank you for using FreeRTOS, and thank you for your support!      *
-     *                                                                       *
-    ***************************************************************************
-
-
-    This file is part of the FreeRTOS distribution.
-
-    FreeRTOS is free software; you can redistribute it and/or modify it under
-    the terms of the GNU General Public License (version 2) as published by the
-    Free Software Foundation AND MODIFIED BY the FreeRTOS exception.
-    >>>NOTE<<< The modification to the GPL is included to allow you to
-    distribute a combined work that includes FreeRTOS without being obliged to
-    provide the source code for proprietary components outside of the FreeRTOS
-    kernel.  FreeRTOS is distributed in the hope that it will be useful, but
-    WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
-    more details. You should have received a copy of the GNU General Public
-    License and the FreeRTOS license exception along with FreeRTOS; if not it
-    can be viewed here: http://www.freertos.org/a00114.html and also obtained
-    by writing to Richard Barry, contact details for whom are available on the
-    FreeRTOS WEB site.
-
-    1 tab == 4 spaces!
-
-    http://www.FreeRTOS.org - Documentation, latest information, license and
-    contact details.
-
-    http://www.SafeRTOS.com - A version that is certified for use in safety
-    critical systems.
-
-    http://www.OpenRTOS.com - Commercial support, development, porting,
-    licensing and training services.
-*/
+ * FreeRTOS Kernel V10.5.1
+ * Copyright (C) 2021 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * https://www.FreeRTOS.org
+ * https://github.com/FreeRTOS
+ *
+ */
 
 /* 
 
@@ -71,20 +46,20 @@ Changes from V2.6.0
  *----------------------------------------------------------*/
 
 /* Start tasks with interrupts enables. */
-#define portFLAGS_INT_ENABLED					( ( portSTACK_TYPE ) 0x80 )
+#define portFLAGS_INT_ENABLED					( ( StackType_t ) 0x80 )
 
 /* Hardware constants for timer 1. */
-#define portCLEAR_COUNTER_ON_MATCH				( ( unsigned char ) 0x08 )
-#define portPRESCALE_64							( ( unsigned char ) 0x03 )
-#define portCLOCK_PRESCALER						( ( unsigned long ) 64 )
-#define portCOMPARE_MATCH_A_INTERRUPT_ENABLE	( ( unsigned char ) 0x10 )
+#define portCLEAR_COUNTER_ON_MATCH				( ( uint8_t ) 0x08 )
+#define portPRESCALE_64							( ( uint8_t ) 0x03 )
+#define portCLOCK_PRESCALER						( ( uint32_t ) 64 )
+#define portCOMPARE_MATCH_A_INTERRUPT_ENABLE	( ( uint8_t ) 0x10 )
 
 /*-----------------------------------------------------------*/
 
 /* We require the address of the pxCurrentTCB variable, but don't want to know
 any details of its type. */
-typedef void tskTCB;
-extern volatile tskTCB * volatile pxCurrentTCB;
+typedef void TCB_t;
+extern volatile TCB_t * volatile pxCurrentTCB;
 
 /*-----------------------------------------------------------*/
 
@@ -208,9 +183,9 @@ static void prvSetupTimerInterrupt( void );
 /* 
  * See header file for description. 
  */
-portSTACK_TYPE *pxPortInitialiseStack( portSTACK_TYPE *pxTopOfStack, pdTASK_CODE pxCode, void *pvParameters )
+StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters )
 {
-unsigned short usAddress;
+uint16_t usAddress;
 
 	/* Place a few bytes of known values on the bottom of the stack. 
 	This is just useful for debugging. */
@@ -229,92 +204,92 @@ unsigned short usAddress;
 
 	/* The start of the task code will be popped off the stack last, so place
 	it on first. */
-	usAddress = ( unsigned short ) pxCode;
-	*pxTopOfStack = ( portSTACK_TYPE ) ( usAddress & ( unsigned short ) 0x00ff );
+	usAddress = ( uint16_t ) pxCode;
+	*pxTopOfStack = ( StackType_t ) ( usAddress & ( uint16_t ) 0x00ff );
 	pxTopOfStack--;
 
 	usAddress >>= 8;
-	*pxTopOfStack = ( portSTACK_TYPE ) ( usAddress & ( unsigned short ) 0x00ff );
+	*pxTopOfStack = ( StackType_t ) ( usAddress & ( uint16_t ) 0x00ff );
 	pxTopOfStack--;
 
 	/* Next simulate the stack as if after a call to portSAVE_CONTEXT().  
 	portSAVE_CONTEXT places the flags on the stack immediately after r0
 	to ensure the interrupts get disabled as soon as possible, and so ensuring
 	the stack use is minimal should a context switch interrupt occur. */
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x00;	/* R0 */
+	*pxTopOfStack = ( StackType_t ) 0x00;	/* R0 */
 	pxTopOfStack--;
 	*pxTopOfStack = portFLAGS_INT_ENABLED;
 	pxTopOfStack--;
 
 
 	/* Now the remaining registers.   The compiler expects R1 to be 0. */
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x00;	/* R1 */
+	*pxTopOfStack = ( StackType_t ) 0x00;	/* R1 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x02;	/* R2 */
+	*pxTopOfStack = ( StackType_t ) 0x02;	/* R2 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x03;	/* R3 */
+	*pxTopOfStack = ( StackType_t ) 0x03;	/* R3 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x04;	/* R4 */
+	*pxTopOfStack = ( StackType_t ) 0x04;	/* R4 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x05;	/* R5 */
+	*pxTopOfStack = ( StackType_t ) 0x05;	/* R5 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x06;	/* R6 */
+	*pxTopOfStack = ( StackType_t ) 0x06;	/* R6 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x07;	/* R7 */
+	*pxTopOfStack = ( StackType_t ) 0x07;	/* R7 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x08;	/* R8 */
+	*pxTopOfStack = ( StackType_t ) 0x08;	/* R8 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x09;	/* R9 */
+	*pxTopOfStack = ( StackType_t ) 0x09;	/* R9 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x10;	/* R10 */
+	*pxTopOfStack = ( StackType_t ) 0x10;	/* R10 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x11;	/* R11 */
+	*pxTopOfStack = ( StackType_t ) 0x11;	/* R11 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x12;	/* R12 */
+	*pxTopOfStack = ( StackType_t ) 0x12;	/* R12 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x13;	/* R13 */
+	*pxTopOfStack = ( StackType_t ) 0x13;	/* R13 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x14;	/* R14 */
+	*pxTopOfStack = ( StackType_t ) 0x14;	/* R14 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x15;	/* R15 */
+	*pxTopOfStack = ( StackType_t ) 0x15;	/* R15 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x16;	/* R16 */
+	*pxTopOfStack = ( StackType_t ) 0x16;	/* R16 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x17;	/* R17 */
+	*pxTopOfStack = ( StackType_t ) 0x17;	/* R17 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x18;	/* R18 */
+	*pxTopOfStack = ( StackType_t ) 0x18;	/* R18 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x19;	/* R19 */
+	*pxTopOfStack = ( StackType_t ) 0x19;	/* R19 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x20;	/* R20 */
+	*pxTopOfStack = ( StackType_t ) 0x20;	/* R20 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x21;	/* R21 */
+	*pxTopOfStack = ( StackType_t ) 0x21;	/* R21 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x22;	/* R22 */
+	*pxTopOfStack = ( StackType_t ) 0x22;	/* R22 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x23;	/* R23 */
+	*pxTopOfStack = ( StackType_t ) 0x23;	/* R23 */
 	pxTopOfStack--;
 
 	/* Place the parameter on the stack in the expected location. */
-	usAddress = ( unsigned short ) pvParameters;
-	*pxTopOfStack = ( portSTACK_TYPE ) ( usAddress & ( unsigned short ) 0x00ff );
+	usAddress = ( uint16_t ) pvParameters;
+	*pxTopOfStack = ( StackType_t ) ( usAddress & ( uint16_t ) 0x00ff );
 	pxTopOfStack--;
 
 	usAddress >>= 8;
-	*pxTopOfStack = ( portSTACK_TYPE ) ( usAddress & ( unsigned short ) 0x00ff );
+	*pxTopOfStack = ( StackType_t ) ( usAddress & ( uint16_t ) 0x00ff );
 	pxTopOfStack--;
 
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x26;	/* R26 X */
+	*pxTopOfStack = ( StackType_t ) 0x26;	/* R26 X */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x27;	/* R27 */
+	*pxTopOfStack = ( StackType_t ) 0x27;	/* R27 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x28;	/* R28 Y */
+	*pxTopOfStack = ( StackType_t ) 0x28;	/* R28 Y */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x29;	/* R29 */
+	*pxTopOfStack = ( StackType_t ) 0x29;	/* R29 */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x30;	/* R30 Z */
+	*pxTopOfStack = ( StackType_t ) 0x30;	/* R30 Z */
 	pxTopOfStack--;
-	*pxTopOfStack = ( portSTACK_TYPE ) 0x031;	/* R31 */
+	*pxTopOfStack = ( StackType_t ) 0x031;	/* R31 */
 	pxTopOfStack--;
 
 	/*lint +e950 +e611 +e923 */
@@ -323,7 +298,7 @@ unsigned short usAddress;
 }
 /*-----------------------------------------------------------*/
 
-portBASE_TYPE xPortStartScheduler( void )
+BaseType_t xPortStartScheduler( void )
 {
 	/* Setup the hardware to generate the tick. */
 	prvSetupTimerInterrupt();
@@ -372,8 +347,10 @@ void vPortYieldFromTick( void ) __attribute__ ( ( naked ) );
 void vPortYieldFromTick( void )
 {
 	portSAVE_CONTEXT();
-	vTaskIncrementTick();
-	vTaskSwitchContext();
+	if( xTaskIncrementTick() != pdFALSE )
+	{
+		vTaskSwitchContext();
+	}
 	portRESTORE_CONTEXT();
 
 	asm volatile ( "ret" );
@@ -385,8 +362,8 @@ void vPortYieldFromTick( void )
  */
 static void prvSetupTimerInterrupt( void )
 {
-unsigned long ulCompareMatch;
-unsigned char ucHighByte, ucLowByte;
+uint32_t ulCompareMatch;
+uint8_t ucHighByte, ucLowByte;
 
 	/* Using 16bit timer 1 to generate the tick.  Correct fuses must be
 	selected for the configCPU_CLOCK_HZ clock. */
@@ -397,13 +374,13 @@ unsigned char ucHighByte, ucLowByte;
 	ulCompareMatch /= portCLOCK_PRESCALER;
 
 	/* Adjust for correct value. */
-	ulCompareMatch -= ( unsigned long ) 1;
+	ulCompareMatch -= ( uint32_t ) 1;
 
 	/* Setup compare match value for compare match A.  Interrupts are disabled 
 	before this is called so we need not worry here. */
-	ucLowByte = ( unsigned char ) ( ulCompareMatch & ( unsigned long ) 0xff );
+	ucLowByte = ( uint8_t ) ( ulCompareMatch & ( uint32_t ) 0xff );
 	ulCompareMatch >>= 8;
-	ucHighByte = ( unsigned char ) ( ulCompareMatch & ( unsigned long ) 0xff );
+	ucHighByte = ( uint8_t ) ( ulCompareMatch & ( uint32_t ) 0xff );
 	OCR1AH = ucHighByte;
 	OCR1AL = ucLowByte;
 
@@ -426,8 +403,8 @@ unsigned char ucHighByte, ucLowByte;
 	 * the context is saved at the start of vPortYieldFromTick().  The tick
 	 * count is incremented after the context is saved.
 	 */
-	void SIG_OUTPUT_COMPARE1A( void ) __attribute__ ( ( signal, naked ) );
-	void SIG_OUTPUT_COMPARE1A( void )
+	void TIMER1_COMPA_vect( void ) __attribute__ ( ( signal, naked ) );
+	void TIMER1_COMPA_vect( void )
 	{
 		vPortYieldFromTick();
 		asm volatile ( "reti" );
@@ -439,10 +416,10 @@ unsigned char ucHighByte, ucLowByte;
 	 * tick count.  We don't need to switch context, this can only be done by
 	 * manual calls to taskYIELD();
 	 */
-	void SIG_OUTPUT_COMPARE1A( void ) __attribute__ ( ( signal ) );
-	void SIG_OUTPUT_COMPARE1A( void )
+	void TIMER1_COMPA_vect( void ) __attribute__ ( ( signal ) );
+	void TIMER1_COMPA_vect( void )
 	{
-		vTaskIncrementTick();
+		xTaskIncrementTick();
 	}
 #endif
 
